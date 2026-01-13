@@ -1,0 +1,21 @@
+{
+  "name": "crud-with-mongodb",
+  "version": "1.0.0",
+  "description": "crud operations practical with mongoDB",
+  "keywords": [
+    "mongoDB",
+    "javascript"
+  ],
+  "license": "ISC",
+  "author": "Utkarsh Dubey",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0"
+  }
+}

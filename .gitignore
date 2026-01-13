@@ -1,0 +1,15 @@
+/node_modules
+/dist
+/build
+/src
+/test
+/docs
+/logs
+/tmp
+/cache
+/backup
+/config
+/data
+/config.js
+/.env
+/package-lock.json

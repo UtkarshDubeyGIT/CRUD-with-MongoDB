@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: #ffffff;
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #000000;
+    padding: 40px;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000000;
+}
+
+header h1 {
+    color: #000000;
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: #666666;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.add-task-section {
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.add-task-section h2 {
+    color: #000000;
+    margin-bottom: 24px;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    background: #ffffff;
+    font-size: 1em;
+    font-family: inherit;
+    color: #000000;
+    transition: none;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000000;
+    background: #fafafa;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: 1px solid #000000;
+    background: #ffffff;
+    color: #000000;
+    font-size: 0.9em;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background: #000000;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.btn-secondary:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.tasks-section {
+    margin-top: 0;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #000000;
+}
+
+.tasks-header h2 {
+    color: #000000;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-card {
+    background: #ffffff;
+    border: 1px solid #000000;
+    padding: 24px;
+    transition: none;
+    position: relative;
+}
+
+.task-card:hover {
+    background: #fafafa;
+}
+
+.task-card.completed {
+    background: #f5f5f5;
+    border-color: #666666;
+}
+
+.task-card.completed .task-title {
+    text-decoration: line-through;
+    color: #666666;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.task-title {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #000000;
+    flex: 1;
+}
+
+.task-status {
+    padding: 4px 12px;
+    border: 1px solid #000000;
+    font-size: 0.75em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.task-status.completed {
+    background: #000000;
+    color: #ffffff;
+}
+
+.task-description {
+    color: #333333;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.task-meta {
+    font-size: 0.8em;
+    color: #666666;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.task-actions button {
+    padding: 8px 16px;
+    font-size: 0.85em;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666666;
+    border: 1px dashed #000000;
+}
+
+.empty-state p {
+    font-size: 1em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #000000;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.error {
+    background: #ffffff;
+    color: #000000;
+    padding: 16px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+.error strong {
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #000000;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #000000;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 24px;
+    font-weight: 300;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    line-height: 1;
+}
+
+.close:hover {
+    opacity: 0.5;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-buttons button {
+    flex: 1;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.form-group label[for="editTaskStatus"] {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 24px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .tasks-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .task-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .task-actions {
+        width: 100%;
+    }
+
+    .task-actions button {
+        flex: 1;
+    }
+
+    .modal-content {
+        padding: 24px;
+        margin: 20% auto;
+    }
+}
